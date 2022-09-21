@@ -107,7 +107,7 @@ public class AbstrDoubleList<T> implements IAbstrDoubleList<T>
     /**
      * Creates empty double list
      */
-    AbstrDoubleList()
+    public AbstrDoubleList()
     {
         this.head = null;
         this.tail = null;
@@ -240,43 +240,168 @@ public class AbstrDoubleList<T> implements IAbstrDoubleList<T>
     }
 
     @Override
-    public T zpristupniNaslednika() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public T zpristupniNaslednika()
+    {
+        T reti = null;
+        if (Objects.nonNull(this.actual) && Objects.nonNull(this.actual.getNext()))
+        {
+            reti = (T)this.actual.getNext().getData();
+            this.actual = this.actual.getNext();
+        }
+        return reti;
     }
 
     @Override
-    public T zpristupniPredchudce() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public T zpristupniPredchudce()
+    {
+        T reti = null;
+        if (Objects.nonNull(this.actual) && Objects.nonNull(this.actual.getPrevious()))
+        {
+            reti = (T)this.actual.getPrevious().getData();
+            this.actual = this.actual.getPrevious();
+        }
+        return reti;
+    }
+
+    /**
+     * Removes node from the list
+     * @param node Node which will be removed from the list
+     */
+    private void removeNode(Node<T> node)
+    {
+        if (this.jePrazdny() == false)
+        {
+            // Resolve bonds to other elements in the list
+            if (Objects.nonNull(node.getPrevious()) && Objects.nonNull(node.getNext()))
+            { // Node has both predecessor and successor
+                node.getPrevious().setNext(node.getNext());
+                node.getNext().setPrevious(node.getPrevious());
+            }
+            else if (Objects.nonNull(node.getPrevious()) && Objects.isNull(node.getNext()))
+            { // Node has only predecessor
+                node.getPrevious().setNext(null);
+            }
+            else if (Objects.isNull(node.getPrevious()) && Objects.nonNull(node.getNext()))
+            { // Node has only successor
+                node.getNext().setPrevious(null);
+            }
+
+            // Check both ends of list
+            if (this.head.equals(node))
+            {
+                this.head = node.getNext();
+            }
+            if (this.tail.equals(node))
+            {
+                this.tail = node.getPrevious();
+            }
+
+            // Check, if node is actual one
+            if (this.actual.equals(node))
+            {
+                this.actual = this.head;
+            }
+
+            // Finish removing
+            node = null;
+            this.size--;
+            System.gc(); 
+        }
+    }
+    
+    @Override
+    public T odeberAktualni()
+    {
+        T reti = null;
+        if (Objects.nonNull(this.actual))
+        {
+            reti = (T)this.actual.getData();
+            this.removeNode(this.actual);
+        }
+        return reti;
     }
 
     @Override
-    public T odeberAktualni() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public T odeberPrvni()
+    {
+        T reti = null;
+        if (this.jePrazdny() == false)
+        {
+            reti = (T)this.head.getData();
+            this.removeNode(this.head);
+        }
+        return reti;
     }
 
     @Override
-    public T odeberPrvni() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public T odeberPosledni()
+    {
+        T reti = null;
+        if (this.jePrazdny() == false)
+        {
+            reti = (T)this.tail.getData();
+            this.removeNode(this.tail);
+        }
+        return reti;
     }
 
     @Override
-    public T odeberPosledni() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public T odeberNaslednika()
+    {
+        T reti = null;
+        if (Objects.nonNull(this.actual) && Objects.nonNull(this.actual.getNext()))
+        {
+            reti = (T)this.actual.getNext().getData();
+            this.removeNode(this.actual.getNext());
+        }
+        return reti;
     }
 
     @Override
-    public T odeberNaslednika() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public T odeberPredchudce()
+    {
+        T reti = null;
+        if (Objects.nonNull(this.actual) && Objects.nonNull(this.actual.getPrevious()))
+        {
+            reti = (T)this.actual.getPrevious().getData();
+            this.removeNode(this.actual.getPrevious());
+        }
+        return reti;
     }
 
     @Override
-    public T odeberPredchudce() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public Iterator iterator() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Iterator<T> iterator()
+    {
+        return new Iterator<T>()
+        {
+            /**
+             * Starting point of iterator
+             */
+            final Node<T> start = head;
+            
+            /**
+             * Actually processed element by iterator
+             */
+            Node<T> element = start;
+            
+            @Override
+            public boolean hasNext()
+            {
+                return Objects.nonNull(element);
+            }
+            
+            @Override
+            public T next()
+            {
+                T reti = element.getData();
+                element = element.getNext();
+                if (element.equals(start))
+                {
+                    element = null;
+                }
+                return reti;
+            }
+        };
     }
     
 }
