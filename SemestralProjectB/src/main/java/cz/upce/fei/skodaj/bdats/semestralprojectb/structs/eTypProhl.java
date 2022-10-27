@@ -15,24 +15,21 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cz.upce.fei.skodaj.bdats.semestralprojecta;
-
-import cz.upce.fei.skodaj.bdats.semestralprojecta.ui.ProgVyrobniProces;
+package cz.upce.fei.skodaj.bdats.semestralprojectb.structs;
 
 /**
- * Main class of program
+ * Enumeration of all available types of way browsing through table
  * @author Jiri Skoda <jiri.skoda@student.upce.cz>
  */
-public class Main
+public enum eTypProhl
 {
     /**
-     * Entry point of program
-     * @param args Arguments of program
+     * Level order
      */
-    public static void main(String[] args)
-    {
-        
-        ProgVyrobniProces program = new ProgVyrobniProces();
-        program.run(args);
-    }
+    DO_SIRKY,
+    
+    /**
+     * In order
+     */
+    DO_HLOUBKY
 }

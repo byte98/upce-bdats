@@ -15,24 +15,11 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cz.upce.fei.skodaj.bdats.semestralprojecta;
-
-import cz.upce.fei.skodaj.bdats.semestralprojecta.ui.ProgVyrobniProces;
+package cz.upce.fei.skodaj.bdats.semestralprojectb.structs;
 
 /**
- * Main class of program
+ * Interface abstracting last in - first out data structure
  * @author Jiri Skoda <jiri.skoda@student.upce.cz>
  */
-public class Main
-{
-    /**
-     * Entry point of program
-     * @param args Arguments of program
-     */
-    public static void main(String[] args)
-    {
-        
-        ProgVyrobniProces program = new ProgVyrobniProces();
-        program.run(args);
-    }
-}
+public interface IAbstrLifo<T> extends IAbstrLifoFifo<T>
+{}

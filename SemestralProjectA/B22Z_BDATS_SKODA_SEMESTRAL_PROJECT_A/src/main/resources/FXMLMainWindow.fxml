@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.upce.fei.skodaj.bdats.semestralprojecta.ui.FXMLMainWindowController">
+   <top>
+      <TabPane prefHeight="140.0" prefWidth="800.0" stylesheets="@FXMLMainWindow.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="DATA">
+               <content>
+                  <HBox styleClass="hbox" stylesheets="@FXMLMainWindow.css">
+                     <children>
+                        <Button fx:id="buttonNewProcess" mnemonicParsing="false" onAction="#buttonNewProcess_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Vložit nový" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="proces" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonGenerate" mnemonicParsing="false" onAction="#buttonGenerate_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Generovat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="procesy" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="buttonFirst" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonFirst_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="První" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="33.0" layoutY="76.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonPrevious" layoutX="190.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonPrevious_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Předchozí" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="21.0" layoutY="76.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonNext" layoutX="278.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNext_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Následující" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="76.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonLast" layoutX="366.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonLast_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Poslední" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="76.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Separator layoutX="186.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="buttonAggregate" layoutX="454.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonAggregate_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Agregace" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="76.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonDecompose" layoutX="546.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonDecompose_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Dekompozice" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="76.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonReorganize" disable="true" layoutX="634.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonReorganize_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Reorganizace" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="76.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="PROCES">
+               <content>
+                  <HBox styleClass="hbox" stylesheets="@FXMLMainWindow.css">
+                     <children>
+                        <Button fx:id="buttonImport" mnemonicParsing="false" onAction="#buttonImport_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Importovat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="procesy" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonImportFromFile" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonImportFromFile_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Importovat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="ze souboru" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="buttonRemoveFirst" layoutX="98.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonRemoveFirst_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Smazat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="první" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonRemovePrevious" layoutX="190.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonRemovePrevious_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Smazat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="předchozí" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonRemoveActual" layoutX="278.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonRemoveActual_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Smazat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="aktuální" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonRemoveNext" layoutX="278.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonRemoveNext_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Smazat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="následující" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonRemoveLast" layoutX="366.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonRemoveLast_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Smazat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="poslední" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Separator layoutX="186.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="buttonRemoveAll" layoutX="542.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonRemoveAll_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Smazat" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="vše" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="SOUBOR">
+               <content>
+                  <HBox styleClass="hbox" stylesheets="@FXMLMainWindow.css">
+                     <children>
+                        <Button fx:id="buttonSave" layoutX="542.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonSave_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Uložit" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonSaveToFile" layoutX="190.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonSaveToFile_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Uložit" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="do souboru" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Separator layoutX="186.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="buttonLoad" mnemonicParsing="false" onAction="#buttonLoad_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Načíst" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonLoadFromFile" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonLoadFromFile_onAction" prefWidth="88.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" text="" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Segoe UI Symbol" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="   " />
+                                    <Label text="Načíst" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="67.0" text="ze souboru" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </top>
+   <center>
+      <ListView fx:id="listViewContent" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="800.0" spacing="5.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label layoutX="785.0" layoutY="15.0" text=" │ " textFill="#acacac">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Počet procesů:" textFill="WHITE" />
+            <Label fx:id="labelProcesses" layoutX="732.0" layoutY="13.0" text="0" textFill="WHITE" />
+            <Label text=" │ " textFill="#acacac">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="691.0" layoutY="13.0" text="Celkový čas:" textFill="WHITE" />
+            <Label fx:id="labelTime" text="0" textFill="WHITE" />
+            <Label layoutX="704.0" layoutY="15.0" text=" │ " textFill="#acacac">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="704.0" layoutY="13.0" text="Počet kandidátů na reorganizaci:" textFill="WHITE" />
+            <Label fx:id="labelReorganize" layoutX="627.0" layoutY="13.0" text="0" textFill="WHITE" />
+            <Label layoutX="430.0" layoutY="15.0" text=" │ " textFill="#acacac">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="596.0" layoutY="13.0" text="Typ reorganizace:" textFill="WHITE" />
+            <Label fx:id="labelReorganizeType" layoutX="706.0" layoutY="13.0" text="(žádná)" textFill="WHITE" />
+            <Label layoutX="643.0" layoutY="15.0" text=" │ " textFill="#acacac">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

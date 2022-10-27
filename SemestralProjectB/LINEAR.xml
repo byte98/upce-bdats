@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML>
+    <DATA>
+        <CASTLE>
+            <ID>0</ID>
+            <NAME>Adamov</NAME>
+            <LOCATION>
+                <LATITUDE>49.30389444444444</LATITUDE>
+                <LONGITUDE>16.645291666666665</LONGITUDE>
+            </LOCATION>
+        </CASTLE>
+        <CASTLE>
+            <ID>1</ID>
+            <NAME>Bartosovice</NAME>
+            <LOCATION>
+                <LATITUDE>49.671324999999996</LATITUDE>
+                <LONGITUDE>18.050480555555556</LONGITUDE>
+            </LOCATION>
+        </CASTLE>
+        <CASTLE>
+            <ID>2</ID>
+            <NAME>Castolovice</NAME>
+            <LOCATION>
+                <LATITUDE>50.13063888888889</LATITUDE>
+                <LONGITUDE>16.187</LONGITUDE>
+            </LOCATION>
+        </CASTLE>
+        <CASTLE>
+            <ID>3</ID>
+            <NAME>Dalecin</NAME>
+            <LOCATION>
+                <LATITUDE>49.59193055555556</LATITUDE>
+                <LONGITUDE>16.243983333333333</LONGITUDE>
+            </LOCATION>
+        </CASTLE>
+        <CASTLE>
+            <ID>4</ID>
+            <NAME>Emin zamek</NAME>
+            <LOCATION>
+                <LATITUDE>48.828294444444445</LATITUDE>
+                <LONGITUDE>16.356863888888892</LONGITUDE>
+            </LOCATION>
+        </CASTLE>
+        <CASTLE>
+            <ID>5</ID>
+            <NAME>Fara v Cetkovicich</NAME>
+            <LOCATION>
+                <LATITUDE>49.578719444444445</LATITUDE>
+                <LONGITUDE>16.72122222222222</LONGITUDE>
+            </LOCATION>
+        </CASTLE>
+    </DATA>
+    <KEY>NAME</KEY>
+    <ORDER>LEVEL</ORDER>
+</XML>

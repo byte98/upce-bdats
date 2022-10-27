@@ -15,24 +15,35 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cz.upce.fei.skodaj.bdats.semestralprojecta;
-
-import cz.upce.fei.skodaj.bdats.semestralprojecta.ui.ProgVyrobniProces;
+package cz.upce.fei.skodaj.bdats.semestralprojectb.structs;
 
 /**
- * Main class of program
+ * Interface defining behavior of 'last-in-first-out' structure
  * @author Jiri Skoda <jiri.skoda@student.upce.cz>
  */
-public class Main
+public abstract interface IAbstrLifoFifo<T> extends Iterable<T>
 {
     /**
-     * Entry point of program
-     * @param args Arguments of program
+     * Deletes whole structure
      */
-    public static void main(String[] args)
-    {
-        
-        ProgVyrobniProces program = new ProgVyrobniProces();
-        program.run(args);
-    }
+    void zrus();
+    
+    /**
+     * Checks, whether structure is empty or not
+     * @return TRUE if structure is empty, FALSE otherwise
+     */
+    boolean jePrazdny();
+    
+    /**
+     * Inserts data into structure
+     * @param data Data which will be inserted into structure
+     */
+    void vloz(T data);
+    
+    /**
+     * Gets and removes data from structure
+     * @return Data removed from structure
+     */
+    T odeber();
+    
 }

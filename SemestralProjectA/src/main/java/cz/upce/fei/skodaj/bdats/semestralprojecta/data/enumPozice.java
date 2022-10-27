@@ -15,24 +15,37 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cz.upce.fei.skodaj.bdats.semestralprojecta;
-
-import cz.upce.fei.skodaj.bdats.semestralprojecta.ui.ProgVyrobniProces;
+package cz.upce.fei.skodaj.bdats.semestralprojecta.data;
 
 /**
- * Main class of program
+ * Enumeration of all possible positions for manipulating data
  * @author Jiri Skoda <jiri.skoda@student.upce.cz>
  */
-public class Main
+public enum enumPozice
 {
     /**
-     * Entry point of program
-     * @param args Arguments of program
+     * First position
      */
-    public static void main(String[] args)
-    {
-        
-        ProgVyrobniProces program = new ProgVyrobniProces();
-        program.run(args);
-    }
+    PRVNI,
+    
+    /**
+     * Last position
+     */
+    POSLEDNI,
+    
+    /**
+     * Previous position
+     */
+    PREDCHUDCE,
+    
+    /**
+     * Next position
+     */
+    NASLEDNIK,
+    
+    /**
+     * Actual position
+     */
+    AKTUALNI
+    
 }

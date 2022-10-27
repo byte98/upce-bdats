@@ -15,24 +15,56 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cz.upce.fei.skodaj.bdats.semestralprojecta;
+package cz.upce.fei.skodaj.bdats.semestralprojecta.structs;
 
-import cz.upce.fei.skodaj.bdats.semestralprojecta.ui.ProgVyrobniProces;
+import java.util.Iterator;
 
 /**
- * Main class of program
+ * Implementation of stack like structure
  * @author Jiri Skoda <jiri.skoda@student.upce.cz>
  */
-public class Main
+public class AbstrLifo<T> implements IAbstrLifo<T>
 {
     /**
-     * Entry point of program
-     * @param args Arguments of program
+     * List which stores all data
      */
-    public static void main(String[] args)
+    private IAbstrDoubleList<T> list;
+
+    /**
+     * Creates new stack like structure
+     */
+    public AbstrLifo()
     {
-        
-        ProgVyrobniProces program = new ProgVyrobniProces();
-        program.run(args);
+        this.list = new AbstrDoubleList<>();
+    }
+    
+    @Override
+    public void zrus()
+    {
+        this.list.zrus();
+    }
+
+    @Override
+    public boolean jePrazdny()
+    {
+        return this.list.jePrazdny();
+    }
+
+    @Override
+    public void vloz(T data)
+    {
+        this.list.vlozPrvni(data);
+    }
+
+    @Override
+    public T odeber()
+    {
+        return this.list.odeberPrvni();
+    }
+
+    @Override
+    public Iterator<T> iterator()
+    {
+        return this.list.iterator();
     }
 }
