@@ -40,33 +40,9 @@ public class Main
      * @param args Arguments of program
      */
     public static void main(String[] args)
-    {
-        
+    {        
         ProgPamatky program = new ProgPamatky();
         Dataset ds = Dataset.getInstance();
-        program.run(args);
-        /*
-        IStateLoader sl = new XMLLoader();
-        sl.load();
-        System.out.println(sl);
-        */
-        
-        /*
-        IPamatky pamatky = new Pamatky();
-        for (int i = 0; i < 5; i++)
-        {
-            pamatky.vlozZamek(Generator.getInstance().generateKnown());
-        }
-        Iterator<Zamek> it = pamatky.vytvorIterator(eTypProhl.DO_SIRKY);
-        while (it.hasNext())
-        {
-            System.out.println(it.next().getLocation());
-        }
-        System.out.println("***");
-        System.out.println(pamatky.najdiNejbliz("50,00000000;15,00000000"));
-        pamatky.nastavKlic(eTypKey.GPS);
-        System.out.println(pamatky.najdiNejbliz("50,00000000;15,00000000"));
-        */
-        
+        program.run(args);        
     }
 }
