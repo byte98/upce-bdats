@@ -259,7 +259,7 @@ public class AbstrTable<K extends Comparable<K>, V> implements IAbstrTable<K, V>
     private boolean removeNode(Node<K, V> node)
     {
         boolean reti = false;
-        if (this.root.equals(node)) // Node is root of the tree
+        if (this.root.equals(node) && Objects.isNull(node.getLeft()) && Objects.isNull(node.getRight())) // Node is root of the tree
         {
             this.root = null;
         }

@@ -19,10 +19,7 @@ package cz.upce.fei.skodaj.bdats.semestralprojectb.data;
 
 import cz.upce.fei.skodaj.bdats.semestralprojectb.Main;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.AbstrFifo;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.AbstrLifo;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.AbstrTable;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.IAbstrFifo;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.IAbstrLifo;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.IAbstrLifoFifo;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.IAbstrTable;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.eTypKey;
@@ -32,15 +29,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
-import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

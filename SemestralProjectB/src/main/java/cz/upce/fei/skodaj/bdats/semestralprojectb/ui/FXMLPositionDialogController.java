@@ -23,24 +23,15 @@ import com.sothawo.mapjfx.MapView;
 import com.sothawo.mapjfx.Marker;
 import com.sothawo.mapjfx.Projection;
 import com.sothawo.mapjfx.event.MapViewEvent;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Dataset;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Location;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Zamek;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 /**

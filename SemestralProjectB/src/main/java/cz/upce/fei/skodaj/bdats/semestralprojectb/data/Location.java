@@ -17,7 +17,6 @@
  */
 package cz.upce.fei.skodaj.bdats.semestralprojectb.data;
 
-import cz.upce.fei.skodaj.bdats.semestralprojectb.ui.FXMLMainWindowController;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

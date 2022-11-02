@@ -17,7 +17,6 @@
  */
 package cz.upce.fei.skodaj.bdats.semestralprojectb.ui;
 
-import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Dataset;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
@@ -25,7 +24,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;

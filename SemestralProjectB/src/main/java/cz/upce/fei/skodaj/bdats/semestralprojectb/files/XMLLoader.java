@@ -19,10 +19,6 @@ package cz.upce.fei.skodaj.bdats.semestralprojectb.files;
 
 import cz.upce.fei.skodaj.bdats.semestralprojectb.data.IPamatky;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Zamek;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.AbstrDoubleList;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.AbstrLifo;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.IAbstrDoubleList;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.IAbstrLifo;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.eTypKey;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.eTypProhl;
 import java.io.File;

@@ -18,16 +18,7 @@
 package cz.upce.fei.skodaj.bdats.semestralprojectb;
 
 import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Dataset;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Generator;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.data.IPamatky;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Pamatky;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.data.Zamek;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.files.IStateLoader;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.files.XMLLoader;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.eTypKey;
-import cz.upce.fei.skodaj.bdats.semestralprojectb.structs.eTypProhl;
 import cz.upce.fei.skodaj.bdats.semestralprojectb.ui.ProgPamatky;
-import java.util.Iterator;
 
 /**
  * Main class of program
