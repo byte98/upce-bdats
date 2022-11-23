@@ -1,0 +1,169 @@
+/*
+Copyright (C) 2022 Jiri Skoda <jiri.skoda@student.upce.cz>
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+*/
+/* 
+    Created on : Oct 24, 2022, 12:46:11 PM
+    Author     : Jiri Skoda <jiri.skoda@student.upce.cz>
+*/
+
+.separator *.line { 
+    -fx-border-style: solid;
+    -fx-border-width: 0px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffffff;
+}
+
+.separator{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffffff;
+}
+
+.text-input, .combo-box .arrow-button{
+    -fx-background-radius: 0,0;
+    -fx-background-color: #000000;
+    -fx-border-color: #5d5d5d;
+    -fx-border-width: 2;
+    -fx-text-fill: #ffffff;
+}
+
+.text-input:hover, .combo-box .arrow-button:hover, .combo-box .arrow-button:hover{
+    -fx-border-color: #ffffff;
+}
+
+.text-input:focused{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-cursor: inherit;
+}
+.combo-box{
+    -fx-background-radius: 0,0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box .arrow{
+    -fx-background-color: #ffffff;
+}
+
+.button{
+    -fx-background-radius: 0,0;
+    -fx-background-color: #000000;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-text-fill: #ffffff;
+}
+
+.button:hover{
+    -fx-background-color: #3d3d3d;
+}
+
+.button:pressed, .combo-box .arrow-button:pressed{
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-scale-z: 0.9;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #ffffff;
+    -fx-background-color: #000000;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 3px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: #000000;
+    -fx-background-image: null;
+}
+.radio-button -radio:armed {
+    -fx-background-color: #000000;
+    -fx-background-image: null;
+}
+.radio-button -radio:determinate {
+    -fx-background-color: #000000;
+    -fx-background-image: null;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: #000000;
+    -fx-background-image: null;
+}
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+    -fx-effect: null;
+}
+
+.radio-button:selected .dot{
+    -fx-background-color: #ffffff;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #000000;
+    -fx-border-color: #5d5d5d;
+    -fx-border-width: 2;
+    -fx-text-fill: #ffffff;
+    -fx-body-color: #000000;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-border-color: #ffffff;
+}
+
+.spinner .increment-arrow-button:hover:pressed,
+.spinner .decrement-arrow-button:hover:pressed,
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-scale-z: 0.9;
+}
+
+.spinner .increment-arrow-button .increment-arrow {
+    -fx-background-color: #ffffff;
+}
+
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: #ffffff;
+}
+
+.check-box .box {
+    -fx-background-color: #000000;
+    -fx-border-color:#5d5d5d;
+    -fx-border-width: 2;
+    -fx-border-radius:0; 
+}
+
+.check-box:hover .box{
+    -fx-border-color:#ffffff;
+}
+
+.check-box:selected .mark {
+
+-fx-background-color: white;
+
+}
+
+.check-box:selected .box {
+
+-fx-background-color: #28a3f4;
+}
